@@ -14,7 +14,7 @@ export default function Home() {
           <nav className="hidden md:flex space-x-8">
             <Link href="#features" className="text-muted-foreground hover:text-primary transition">Features</Link>
             <Link href="#pricing" className="text-muted-foreground hover:text-primary transition">Pricing</Link>
-            <Link href="#docs" className="text-muted-foreground hover:text-primary transition">Docs</Link>
+            <Link href="/docs" className="text-muted-foreground hover:text-primary transition">Docs</Link>
           </nav>
           <div className="flex items-center space-x-4">
             <Link href="/login">

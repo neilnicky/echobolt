@@ -1,10 +1,10 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Space_Grotesk } from 'next/font/google';
+import { Catamaran } from 'next/font/google';
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/toaster";
 
-const lexend = Space_Grotesk({ subsets: ['latin'] });
+const lexend = Catamaran({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'EchoLive - Real-time Website Analytics',

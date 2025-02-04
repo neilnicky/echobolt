@@ -9,7 +9,7 @@ export default function Home() {
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center space-x-2">
             <Activity className="h-6 w-6 text-primary" />
-            <span className="font-bold text-xl">EchoBits</span>
+            <span className="font-bold text-xl">EchoLive</span>
           </div>
           <nav className="hidden md:flex space-x-8">
             <Link href="#features" className="text-muted-foreground hover:text-primary transition">Features</Link>
@@ -63,7 +63,7 @@ export default function Home() {
         {/* Features Section */}
         <section id="features" className="py-20 bg-muted/50">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-12">Why Choose EchoBits?</h2>
+            <h2 className="text-3xl font-bold text-center mb-12">Why Choose EchoLive?</h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-background p-6 rounded-lg shadow-sm">
                 <Zap className="h-12 w-12 text-primary mb-4" />
@@ -277,10 +277,10 @@ export default function Home() {
           <div className="flex justify-between items-center">
             <div className="flex items-center space-x-2">
               <Activity className="h-6 w-6 text-primary" />
-              <span className="font-semibold">EchoBits</span>
+              <span className="font-semibold">EchoLive</span>
             </div>
             <p className="text-sm text-muted-foreground">
-              © 2024 EchoBits. All rights reserved.
+              © 2024 EchoLive. All rights reserved.
             </p>
           </div>
         </div>

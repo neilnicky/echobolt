@@ -24,7 +24,7 @@ export default function LoginPage() {
         <div className="text-center">
           <Link href="/" className="flex justify-center items-center space-x-2 mb-8">
             <Activity className="h-6 w-6 text-primary" />
-            <span className="font-bold text-2xl">EchoBits</span>
+            <span className="font-bold text-2xl">EchoLive</span>
           </Link>
           <h2 className="text-2xl font-bold">Welcome back</h2>
           <p className="text-muted-foreground mt-2">Sign in to your account</p>

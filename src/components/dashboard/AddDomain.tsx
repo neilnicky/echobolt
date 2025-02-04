@@ -52,7 +52,7 @@ export default function AddDomain({ onAddDomain }: AddDomainProps) {
             />
           </div>
           <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="username" className="text-right">
+            <Label htmlFor="url" className="text-right">
               Domain URL
             </Label>
             <Input
@@ -64,7 +64,7 @@ export default function AddDomain({ onAddDomain }: AddDomainProps) {
           </div>
         </div>
         <DialogFooter>
-          <Button type="submit" onClick={handleSubmit}>
+          <Button type="button" onClick={handleSubmit}>
             Add Domain
           </Button>
         </DialogFooter>

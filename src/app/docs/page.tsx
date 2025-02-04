@@ -21,7 +21,7 @@ export default function DocsPage() {
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <Link href="/" className="flex items-center space-x-2">
             <Activity className="h-6 w-6 text-primary" />
-            <span className="font-bold text-xl">EchoBits</span>
+            <span className="font-bold text-xl">EchoLive</span>
           </Link>
           <nav className="hidden md:flex space-x-8">
             <Link href="/docs" className="text-primary font-medium">
@@ -63,7 +63,7 @@ export default function DocsPage() {
               <div className="relative">
                 <div className="bg-muted rounded-lg p-4 font-mono text-sm">
                   <code className="text-foreground">
-                    npm install @echobits/echocount-js
+                    npm install @EchoLive/echocount-js
                   </code>
                   <Button
                     variant="ghost"
@@ -71,7 +71,7 @@ export default function DocsPage() {
                     className="absolute right-2 top-2 h-8 w-8"
                     onClick={() =>
                       copyToClipboard(
-                        "npm install @echobits/echocount-js",
+                        "npm install @EchoLive/echocount-js",
                         "npm"
                       )
                     }
@@ -91,16 +91,16 @@ export default function DocsPage() {
               <h2 className="text-2xl font-semibold mb-4">Install via CDN</h2>
               <div className="relative">
                 <div className="bg-muted rounded-lg p-4 font-mono text-sm">
-                  <code className="text-foreground">{`<script src="https://cdn.jsdelivr.net/npm/@echobits/echocount-js"></script>
+                  <code className="text-foreground">{`<script src="https://cdn.jsdelivr.net/npm/@EchoLive/echocount-js"></script>
 // or
-<script src="https://unpkg.com/@echobits/echocount-js@2"></script>`}</code>
+<script src="https://unpkg.com/@EchoLive/echocount-js@2"></script>`}</code>
                   <Button
                     variant="ghost"
                     size="icon"
                     className="absolute right-2 top-2 h-8 w-8"
                     onClick={() =>
                       copyToClipboard(
-                        `<script src="https://cdn.jsdelivr.net/npm/@echobits/echocount-js"></script>`,
+                        `<script src="https://cdn.jsdelivr.net/npm/@EchoLive/echocount-js"></script>`,
                         "cdn"
                       )
                     }
@@ -121,7 +121,7 @@ export default function DocsPage() {
               <div className="relative">
                 <div className="bg-muted rounded-lg p-4 font-mono text-sm">
                   <code className="text-foreground">
-                  <code  className="text-foreground">import countPresence from &apos;jsr:@echobits/echocount-js@2&apos;</code>
+                  <code  className="text-foreground">import countPresence from &apos;jsr:@EchoLive/echocount-js@2&apos;</code>
                   </code>
                   <Button
                     variant="ghost"
@@ -129,7 +129,7 @@ export default function DocsPage() {
                     className="absolute right-2 top-2 h-8 w-8"
                     onClick={() =>
                       copyToClipboard(
-                        "import { countPresence } from 'jsr:@echobits/echocount-js@2'",
+                        "import { countPresence } from 'jsr:@EchoLive/echocount-js@2'",
                         "jsr"
                       )
                     }

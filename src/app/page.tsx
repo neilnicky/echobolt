@@ -1,3 +1,4 @@
+import CodeBlock from "@/components/landingpage/CodeBlock";
 import ComingSoon from "@/components/landingpage/ComingSoon";
 import Features from "@/components/landingpage/Features";
 import Footer from "@/components/landingpage/Footer";
@@ -12,6 +13,7 @@ export default function Home() {
       <Navbar />
       <main className="flex-grow">
         <Hero />
+        <CodeBlock />
         <Features />
         <Privacy />
         <ComingSoon />

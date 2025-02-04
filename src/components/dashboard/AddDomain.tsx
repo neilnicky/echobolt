@@ -1,19 +1,33 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import {
-    Dialog,
-    DialogContent,
-    DialogDescription,
-    DialogFooter,
-    DialogHeader,
-    DialogTitle,
-    DialogTrigger,
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "../ui/label";
+import { useState } from "react";
 
-export default function AddDomain() {
-  //   const [domain, setDomain] = useState<string>("");
+interface AddDomainProps {
+  onAddDomain: (domainName: string, domainUrl: string) => void;
+}
+
+export default function AddDomain({ onAddDomain }: AddDomainProps) {
+  const [domainName, setDomainName] = useState<string>("");
+  const [domainUrl, setDomainUrl] = useState<string>("");
+
+  const handleSubmit = () => {
+    if (domainName && domainUrl) {
+      onAddDomain(domainName, domainUrl); // Pass data to parent
+      setDomainName("");
+      setDomainUrl(""); // Reset fields after submission
+    }
+  };
 
   return (
     <Dialog>
@@ -32,7 +46,8 @@ export default function AddDomain() {
             </Label>
             <Input
               id="name"
-              defaultValue="Pedro Duarte"
+              value={domainName}
+              onChange={(e) => setDomainName(e.target.value)}
               className="col-span-3"
             />
           </div>
@@ -41,14 +56,17 @@ export default function AddDomain() {
               Domain URL
             </Label>
             <Input
-              id="username"
-              defaultValue="@peduarte"
+              id="url"
+              value={domainUrl}
+              onChange={(e) => setDomainUrl(e.target.value)}
               className="col-span-3"
             />
           </div>
         </div>
         <DialogFooter>
-          <Button type="submit">Add Domain</Button>
+          <Button type="submit" onClick={handleSubmit}>
+            Add Domain
+          </Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>

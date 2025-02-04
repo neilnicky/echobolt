@@ -35,7 +35,7 @@ export default function Navbar() {
             <Button variant="ghost">Login</Button>
           </Link>
           <Link href="/signup">
-            <Button>Get Started</Button>
+            <Button className="rounded-xl">Get Started</Button>
           </Link>
         </div>
       </div>

@@ -3,6 +3,7 @@ import { Button } from "../ui/button";
 import Link from "next/link";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { Spotlight } from "../ui/Spotlight";
+import SplitText from "../ui/Splittext";
 
 export default function Hero() {
   return (
@@ -17,10 +18,17 @@ export default function Hero() {
           <Sparkles className="h-4 w-4" />
           The most affordable real-time widgets for your website
         </div>
-        <h1 className="text-5xl md:text-7xl font-semibold tracking-tight mb-6">
-          Real-time Widgets
+        <h1 className="text-5xl md:text-7xl font-semibold tracking-tight mb-6 max-w-md md:max-w-xl">
+          <SplitText
+            text="Real-time Widgets Made Simple"
+            className="text-5xl md:text-7xl font-semibold tracking-tight mb-6"
+            delay={80}
+            animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}
+            animationTo={{ opacity: 1, transform: "translate3d(0,0,0)" }}
+            threshold={0.2}
+            rootMargin="-50px"
+          />
           <br />
-          <span className="text-primary">Made Simple</span>
         </h1>
         <p className="text-xl text-muted-foreground mb-8 max-w-2xl ">
           Track your website visitors in real-time with our powerful and
@@ -28,12 +36,12 @@ export default function Hero() {
         </p>
         <div className="flex justify-start gap-4">
           <Link href="/signup">
-            <Button  className="gap-2  rounded-xl">
+            <Button className="gap-2  rounded-xl">
               Start for Free <ArrowRight className="h-4 w-4" />
             </Button>
           </Link>
           <Link href="#demo">
-            <Button  variant="ghost" className="border rounded-xl">
+            <Button variant="ghost" className="border rounded-xl">
               View Demo
             </Button>
           </Link>

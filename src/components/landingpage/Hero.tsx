@@ -1,9 +1,9 @@
-import React from "react";
-import { Button } from "../ui/button";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
-import { ArrowRight, Sparkles } from "lucide-react";
-import { Spotlight } from "../ui/Spotlight";
+import { Button } from "../ui/button";
+import ShinyText from "../ui/Shinytext";
 import SplitText from "../ui/Splittext";
+import { Spotlight } from "../ui/Spotlight";
 
 export default function Hero() {
   return (
@@ -14,9 +14,15 @@ export default function Hero() {
       />
       <div className="absolute inset-0 bg-gradient-to-br from-[#000000] to-[#001716]" />
       <div className="container mx-auto  relative">
-        <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-1.5 rounded-full text-sm font-medium mb-8">
-          <Sparkles className="h-4 w-4" />
-          The most affordable real-time widgets for your website
+        <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-1.5 rounded-full text-sm font-medium mb-6">
+          {/* <Sparkles className="h-4 w-4" /> */}
+          <ShinyText
+            text="The most affordable real-time widgets for your website"
+            disabled={false}
+            speed={3}
+            className="custom-class "
+          />
+         
         </div>
         <h1 className="text-5xl md:text-7xl font-semibold tracking-tight mb-6 max-w-md md:max-w-xl">
           <SplitText

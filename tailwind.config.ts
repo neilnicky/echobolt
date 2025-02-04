@@ -11,8 +11,13 @@ export default {
     extend: {
       animation: {
         spotlight: "spotlight 2s ease .75s 1 forwards",
+        shine: "shine 5s linear infinite",
       },
       keyframes: {
+        shine: {
+          "0%": { "background-position": "100%" },
+          "100%": { "background-position": "-100%" },
+        },
         spotlight: {
           "0%": {
             opacity: "0",

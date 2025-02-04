@@ -1,18 +1,24 @@
-import { Clock, Gauge, Rocket, Sparkles } from "lucide-react";
-import React from "react";
+import { Clock, Gauge, Rocket } from "lucide-react";
+import ShinyText from "../ui/Shinytext";
 
 export default function ComingSoon() {
   return (
     <section className="py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">Upcoming Features</h2>
-          <p className=" text-muted-foreground ">
-            We&apos;re focused on building useful real-time website widgets
-          </p>
-          <div className="mt-2 inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-1.5 rounded-full text-sm font-medium mb-8">
-            <Sparkles className="h-4 w-4" />
-            Stay Tuned
+          <ShinyText
+            text="Coming Soon"
+            disabled={false}
+            speed={3}
+            className="custom-class text-3xl font-bold mb-2"
+          />
+          <div className="w-fit mx-auto gap-2 bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-medium mb-4">
+            <ShinyText
+              text="Continuous Updates and New Features"
+              disabled={false}
+              speed={3}
+              className="custom-class "
+            />
           </div>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

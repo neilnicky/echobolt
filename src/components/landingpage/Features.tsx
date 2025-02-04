@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Features() {
   return (
-    <section id="features" className="py-20 bg-muted/50">
+    <section id="features" className="py-20 bg-[#0510104d]">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-12">
           Why Choose EchoLive?

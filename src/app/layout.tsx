@@ -1,10 +1,10 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Fira_Code } from 'next/font/google';
+import { Space_Grotesk } from 'next/font/google';
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/toaster";
 
-const inter = Fira_Code({ subsets: ['latin'] });
+const lexend = Space_Grotesk({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'EchoLive - Real-time Website Analytics',
@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={lexend.className}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           {children}
           <Toaster />

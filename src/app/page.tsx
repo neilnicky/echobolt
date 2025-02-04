@@ -1,5 +1,19 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Activity, Zap, Shield, Users, Sparkles, Clock, Gauge, Rocket, Check, Lock, Eye, Database } from "lucide-react";
+import {
+  ArrowRight,
+  Activity,
+  Zap,
+  Shield,
+  Users,
+  Sparkles,
+  Clock,
+  Gauge,
+  Rocket,
+  Check,
+  Lock,
+  Eye,
+  Database,
+} from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {
@@ -12,9 +26,24 @@ export default function Home() {
             <span className="font-bold text-xl">EchoLive</span>
           </div>
           <nav className="hidden md:flex space-x-8">
-            <Link href="#features" className="text-muted-foreground hover:text-primary transition">Features</Link>
-            <Link href="#pricing" className="text-muted-foreground hover:text-primary transition">Pricing</Link>
-            <Link href="/docs" className="text-muted-foreground hover:text-primary transition">Docs</Link>
+            <Link
+              href="#features"
+              className="text-muted-foreground hover:text-primary transition"
+            >
+              Features
+            </Link>
+            <Link
+              href="#pricing"
+              className="text-muted-foreground hover:text-primary transition"
+            >
+              Pricing
+            </Link>
+            <Link
+              href="/docs"
+              className="text-muted-foreground hover:text-primary transition"
+            >
+              Docs
+            </Link>
           </nav>
           <div className="flex items-center space-x-4">
             <Link href="/login">
@@ -42,8 +71,8 @@ export default function Home() {
               <span className="text-primary">Made Simple</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Track your website visitors in real-time with our powerful and easy-to-integrate widgets.
-              Perfect for modern web applications.
+              Track your website visitors in real-time with our powerful and
+              easy-to-integrate widgets. Perfect for modern web applications.
             </p>
             <div className="flex justify-center gap-4">
               <Link href="/signup">
@@ -63,27 +92,34 @@ export default function Home() {
         {/* Features Section */}
         <section id="features" className="py-20 bg-muted/50">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-12">Why Choose EchoLive?</h2>
+            <h2 className="text-3xl font-bold text-center mb-12">
+              Why Choose EchoLive?
+            </h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-background p-6 rounded-lg shadow-sm">
                 <Zap className="h-12 w-12 text-primary mb-4" />
-                <h3 className="text-xl font-semibold mb-2">Real-time Tracking</h3>
+                <h3 className="text-xl font-semibold mb-2">
+                  Real-time Tracking
+                </h3>
                 <p className="text-muted-foreground">
-                  See exactly who&apos;s on your website right now with accurate, real-time visitor counts.
+                  See exactly who&apos;s on your website right now with
+                  accurate, real-time visitor counts.
                 </p>
               </div>
               <div className="bg-background p-6 rounded-lg shadow-sm">
                 <Shield className="h-12 w-12 text-primary mb-4" />
                 <h3 className="text-xl font-semibold mb-2">Privacy Focused</h3>
                 <p className="text-muted-foreground">
-                  GDPR compliant analytics that respect your visitors&apos; privacy while delivering insights.
+                  GDPR compliant analytics that respect your visitors&apos;
+                  privacy while delivering insights.
                 </p>
               </div>
               <div className="bg-background p-6 rounded-lg shadow-sm">
                 <Users className="h-12 w-12 text-primary mb-4" />
                 <h3 className="text-xl font-semibold mb-2">Easy Integration</h3>
                 <p className="text-muted-foreground">
-                  Simple drop-in widgets that work with any framework or technology stack.
+                  Simple drop-in widgets that work with any framework or
+                  technology stack.
                 </p>
               </div>
             </div>
@@ -100,32 +136,36 @@ export default function Home() {
               </div>
               <h2 className="text-3xl font-bold mb-4">Zero Data Collection</h2>
               <p className="text-xl text-muted-foreground">
-                We believe in absolute privacy. Our widgets only count visitors - nothing more, nothing less.
+                We believe in absolute privacy. Our widgets only count visitors
+                - nothing more, nothing less.
               </p>
             </div>
-            
+
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-background p-8 rounded-lg border shadow-sm">
                 <Eye className="h-8 w-8 text-primary mb-4" />
                 <h3 className="text-lg font-semibold mb-2">No Personal Data</h3>
                 <p className="text-muted-foreground">
-                  We never collect, store, or process any personal information from your visitors.
+                  We never collect, store, or process any personal information
+                  from your visitors.
                 </p>
               </div>
-              
+
               <div className="bg-background p-8 rounded-lg border shadow-sm">
                 <Database className="h-8 w-8 text-primary mb-4" />
                 <h3 className="text-lg font-semibold mb-2">Just Numbers</h3>
                 <p className="text-muted-foreground">
-                  Only anonymous visitor counts - no cookies, no tracking, no fingerprinting.
+                  Only anonymous visitor counts - no cookies, no tracking, no
+                  fingerprinting.
                 </p>
               </div>
-              
+
               <div className="bg-background p-8 rounded-lg border shadow-sm">
                 <Shield className="h-8 w-8 text-primary mb-4" />
                 <h3 className="text-lg font-semibold mb-2">GDPR Friendly</h3>
                 <p className="text-muted-foreground">
-                  No consent banners needed. Our widgets are 100% compliant with privacy regulations.
+                  No consent banners needed. Our widgets are 100% compliant with
+                  privacy regulations.
                 </p>
               </div>
             </div>
@@ -144,23 +184,32 @@ export default function Home() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="p-6 rounded-lg border bg-card">
                 <Clock className="h-8 w-8 text-primary mb-4" />
-                <h3 className="text-lg font-semibold mb-2">Session Duration Tracker</h3>
+                <h3 className="text-lg font-semibold mb-2">
+                  Session Duration Tracker
+                </h3>
                 <p className="text-muted-foreground">
-                  Track how long users spend on your website with detailed session analytics.
+                  Track how long users spend on your website with detailed
+                  session analytics.
                 </p>
               </div>
               <div className="p-6 rounded-lg border bg-card">
                 <Gauge className="h-8 w-8 text-primary mb-4" />
-                <h3 className="text-lg font-semibold mb-2">Performance Metrics</h3>
+                <h3 className="text-lg font-semibold mb-2">
+                  Performance Metrics
+                </h3>
                 <p className="text-muted-foreground">
-                  Real-time performance monitoring to ensure your website runs at its best.
+                  Real-time performance monitoring to ensure your website runs
+                  at its best.
                 </p>
               </div>
               <div className="p-6 rounded-lg border bg-card">
                 <Rocket className="h-8 w-8 text-primary mb-4" />
-                <h3 className="text-lg font-semibold mb-2">Engagement Widgets</h3>
+                <h3 className="text-lg font-semibold mb-2">
+                  Engagement Widgets
+                </h3>
                 <p className="text-muted-foreground">
-                  Interactive elements to boost user engagement and conversion rates.
+                  Interactive elements to boost user engagement and conversion
+                  rates.
                 </p>
               </div>
             </div>
@@ -171,7 +220,9 @@ export default function Home() {
         <section id="pricing" className="py-20 bg-muted/50">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Simple, Transparent Pricing</h2>
+              <h2 className="text-3xl font-bold mb-4">
+                Simple, Transparent Pricing
+              </h2>
               <p className="text-xl text-muted-foreground">
                 Start for free, upgrade when you need more
               </p>
@@ -182,7 +233,9 @@ export default function Home() {
                 <div className="text-center mb-6">
                   <h3 className="text-lg font-semibold mb-2">Developer</h3>
                   <div className="text-3xl font-bold mb-2">Free</div>
-                  <p className="text-sm text-muted-foreground">Perfect for getting started</p>
+                  <p className="text-sm text-muted-foreground">
+                    Perfect for getting started
+                  </p>
                 </div>
                 <ul className="space-y-3 mb-6">
                   <li className="flex items-center gap-2">
@@ -212,8 +265,12 @@ export default function Home() {
                 </div>
                 <div className="text-center mb-6">
                   <h3 className="text-lg font-semibold mb-2">Premium</h3>
-                  <div className="text-3xl font-bold mb-2">$1<span className="text-lg text-muted-foreground">/mo</span></div>
-                  <p className="text-sm text-muted-foreground">For growing websites</p>
+                  <div className="text-3xl font-bold mb-2">
+                    $1<span className="text-lg text-muted-foreground">/mo</span>
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    For growing websites
+                  </p>
                 </div>
                 <ul className="space-y-3 mb-6">
                   <li className="flex items-center gap-2">
@@ -243,7 +300,9 @@ export default function Home() {
                 <div className="text-center mb-6">
                   <h3 className="text-lg font-semibold mb-2">Enterprise</h3>
                   <div className="text-3xl font-bold mb-2">Custom</div>
-                  <p className="text-sm text-muted-foreground">For large-scale applications</p>
+                  <p className="text-sm text-muted-foreground">
+                    For large-scale applications
+                  </p>
                 </div>
                 <ul className="space-y-3 mb-6">
                   <li className="flex items-center gap-2">
@@ -264,7 +323,9 @@ export default function Home() {
                   </li>
                 </ul>
                 <Link href="/contact" className="block">
-                  <Button variant="outline" className="w-full">Contact Sales</Button>
+                  <Button variant="outline" className="w-full">
+                    Contact Sales
+                  </Button>
                 </Link>
               </div>
             </div>
@@ -279,8 +340,12 @@ export default function Home() {
               <Activity className="h-6 w-6 text-primary" />
               <span className="font-semibold">EchoLive</span>
             </div>
+            <div className="text-xs flex justify-between gap-6 text-gray-300 cursor-pointer">
+              <p className="hover:text-white ">Terms of Service</p>
+              <p className="hover:text-white ">Support</p>
+            </div>
             <p className="text-sm text-muted-foreground">
-              © 2024 EchoLive. All rights reserved.
+              © 2025 EchoLive. All rights reserved.
             </p>
           </div>
         </div>

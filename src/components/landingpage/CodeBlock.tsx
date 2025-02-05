@@ -21,7 +21,7 @@ export default function CodeBlock() {
 
   return (
     <section className="py-24 relative overflow-hidden">
-      <div className="absolute  hero-gradientabsolute inset-0 hero-gradient opacity-30" />
+      <div className="absolute inset-0 hero-gradient opacity-30" />
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>

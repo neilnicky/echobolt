@@ -42,7 +42,7 @@ export default function AddDomain({ onAddDomain }: AddDomainProps) {
         <div className="grid gap-4 py-4">
           <div className="grid grid-cols-4 items-center gap-4">
             <Label htmlFor="name" className="text-right">
-              Domain Name
+              App Name
             </Label>
             <Input
               id="name"
@@ -53,7 +53,7 @@ export default function AddDomain({ onAddDomain }: AddDomainProps) {
           </div>
           <div className="grid grid-cols-4 items-center gap-4">
             <Label htmlFor="url" className="text-right">
-              Domain URL
+              App URL
             </Label>
             <Input
               id="url"

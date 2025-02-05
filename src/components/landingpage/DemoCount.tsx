@@ -16,13 +16,13 @@ export default function DemoCount() {
 
   useEffect(() => {
     // Total historical visitors (typically in tens/hundreds of thousands)
-    const total = getRandomNumber(5000, 10000);
+    const total = getRandomNumber(2000, 10000);
 
     // Monthly visitors (typically 5-15% of total visitors)
     const monthly = getRandomNumber(500, 1000);
 
     // Concurrent active users (typically much smaller)
-    const active = getRandomNumber(3, 15);
+    const active = getRandomNumber(3, 12);
 
     setMetrics({
       totalVisitors: total,
@@ -34,7 +34,7 @@ export default function DemoCount() {
     // <div className="flex flex-col items-end mt-10 text-">
     //   <div className="">
     //     <GradientText
-    //       colors={["#22202a", "#40ffaa"]}
+    //       colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
     //       animationSpeed={3}
     //       showBorder={false}
     //       className="custom-class px-2"
@@ -52,7 +52,7 @@ export default function DemoCount() {
     //   </div>
     //   <div className="">
     //     <GradientText
-    //       colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+    //       colors={["#FF0000", "#D1001F", "#A50034", "#6A0DAD", "#4000FF"]}
     //       animationSpeed={3}
     //       showBorder={false}
     //       className="custom-class px-2 "
@@ -70,7 +70,7 @@ export default function DemoCount() {
     //   </div>
     //   <div className="">
     //     <GradientText
-    //       colors={["#22202a", "#40ffaa"]}
+    //       colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
     //       animationSpeed={3}
     //       showBorder={false}
     //       className="custom-class px-2 "

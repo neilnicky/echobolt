@@ -29,7 +29,7 @@ export default function Hero() {
               <SplitText
                 text="Real-time Widgets Made Simple"
                 className="text-5xl md:text-7xl font-semibold tracking-tight mb-6"
-                delay={80}
+                delay={60}
                 animationFrom={{
                   opacity: 0,
                   transform: "translate3d(0,50px,0)",

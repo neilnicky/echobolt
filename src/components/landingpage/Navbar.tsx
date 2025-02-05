@@ -5,11 +5,13 @@ import { Button } from "../ui/button";
 
 export default function Navbar() {
   return (
-<header className=" bg-background/50 backdrop-blur-sm sticky top-0 z-50">      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <div className="flex items-center space-x-2">
+    <header className=" bg-background/50 backdrop-blur-sm sticky top-0 z-50">
+      {" "}
+      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+        <Link href="/" className="flex items-center space-x-2">
           <Activity className="h-6 w-6 text-primary" />
           <span className="font-bold text-xl">EchoLive</span>
-        </div>
+        </Link>
         <nav className="hidden md:flex space-x-8">
           <Link
             href="#features"
@@ -18,7 +20,7 @@ export default function Navbar() {
             Features
           </Link>
           <Link
-            href="#pricing"
+            href="/pricing"
             className="text-muted-foreground hover:text-primary transition"
           >
             Pricing

@@ -88,7 +88,7 @@ export default function Features() {
   ];
 
   return (
-    <section id="features" className="py-32 bg-gradient-to-br from-[#030303] to-[#0a0a0a]">
+    <section id="features" className="py-32 oreh-gradient">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: -20 }}

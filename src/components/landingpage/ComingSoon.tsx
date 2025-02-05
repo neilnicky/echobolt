@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
 import { motion } from "framer-motion";
-import { Clock, Gauge, Rocket, Sparkles } from "lucide-react";
+import { Clock, Hourglass, Rocket, Shapes, Sparkles } from "lucide-react";
 import { useState } from "react";
 
 interface FeatureCardProps {
@@ -11,7 +11,12 @@ interface FeatureCardProps {
   index: number;
 }
 
-const FeatureCard = ({ icon: Icon, title, description, index }: FeatureCardProps) => {
+const FeatureCard = ({
+  icon: Icon,
+  title,
+  description,
+  index,
+}: FeatureCardProps) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -66,26 +71,29 @@ const FeatureCard = ({ icon: Icon, title, description, index }: FeatureCardProps
 export default function ComingSoon() {
   const features = [
     {
-      icon: Clock,
+      icon: Hourglass,
       title: "Session Duration Tracker",
-      description: "Track how long users spend on your website with detailed session analytics and user flow visualization.",
-    },
-    {
-      icon: Gauge,
-      title: "Performance Metrics",
-      description: "Real-time performance monitoring with intelligent alerts and optimization recommendations.",
+      description:
+        "Track how long users spend on your website with detailed session analytics and user flow visualization.",
     },
     {
       icon: Rocket,
+      title: "Performance Metrics",
+      description:
+        "Real-time performance monitoring with intelligent alerts and optimization recommendations.",
+    },
+    {
+      icon: Shapes,
       title: "Engagement Widgets",
-      description: "Interactive elements and smart popups to boost user engagement and conversion rates.",
+      description:
+        "Interactive elements and smart popups to boost user engagement and conversion rates.",
     },
   ];
 
   return (
     <section className="relative py-32 overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(16,185,129,0.05),transparent_50%)]" />
-      
+
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -112,7 +120,7 @@ export default function ComingSoon() {
             viewport={{ once: true }}
             className="text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white to-white/70"
           >
-            The Future of Analytics
+            Upcoming Features
           </motion.h2>
 
           <motion.p
@@ -122,7 +130,8 @@ export default function ComingSoon() {
             viewport={{ once: true }}
             className="text-zinc-400 max-w-2xl mx-auto"
           >
-            We&apos;re building the next generation of web analytics tools. Here&apos;s a sneak peek at what&apos;s coming.
+            We&apos;re building the next generation of web live tools.
+            Here&apos;s a sneak peek at what&apos;s coming.
           </motion.p>
         </div>
 
@@ -140,4 +149,4 @@ export default function ComingSoon() {
       </motion.div>
     </section>
   );
-} 
+}

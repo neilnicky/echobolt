@@ -8,7 +8,8 @@ export default function Pricing() {
       <div className="container mx-auto px-4 relative">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white to-white/80">
-            Simple, Transparent <span className="text-emerald-500">Pricing</span>
+            Simple, Transparent{" "}
+            <span className="text-emerald-500">Pricing</span>
           </h2>
           <p className="text-xl text-muted-foreground">
             Start for free, scale as you grow
@@ -18,7 +19,7 @@ export default function Pricing() {
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {/* Free Plan */}
           <div className="relative group ">
-            <div className="absolute   inset-0 bg-gradient-to-r from-primary/20 to-primary/10 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500 opacity-0 group-hover:opacity-100" />
+            <div className="absolute   inset-0 bg-gradient-to-r from-primary/20 to-primary/10 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500 opacity-0 group-hover:opacity-0" />
             <div className="relative  bg-black/40 border border-primary/20 backdrop-blur-xl rounded-3xl p-8 hover:border-primary transition-colors duration-300 ">
               <div className="flex flex-col h-full">
                 <div className="mb-8">
@@ -62,7 +63,7 @@ export default function Pricing() {
 
           {/* Pro Plan */}
           <div className="relative group">
-            <div className="absolute inset-0 bg-gradient-to-r from-primary to-primary/50 rounded-3xl blur-xl opacity-20   group-hover:blur-2xl transition-all duration-500" />
+            <div className="absolute inset-0 bg-gradient-to-r from-primary to-primary/50 rounded-3xl blur-xl opacity-20 group-hover:blur-2xl transition-all duration-500" />
             <div className="relative bg-black/40 border border-primary/20 backdrop-blur-xl rounded-3xl p-8 hover:border-primary  transition-colors duration-300">
               <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-medium">
                 Most Popular
@@ -113,7 +114,7 @@ export default function Pricing() {
 
           {/* Enterprise Plan */}
           <div className="relative group">
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-primary/10 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500 opacity-0 group-hover:opacity-100" />
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-primary/10 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500 opacity-0 group-hover:opacity-0" />
             <div className="relative bg-black/40 border border-primary/20 backdrop-blur-xl rounded-3xl p-8 hover:border-primary  transition-colors duration-300">
               <div className="flex flex-col h-full">
                 <div className="mb-8">

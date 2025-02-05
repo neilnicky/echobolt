@@ -25,7 +25,7 @@ const FeatureCard = ({ icon: Icon, title, description, index }: FeatureCardProps
       className="relative group"
     >
       <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 via-emerald-500/5 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-500 blur-xl" />
-      <div className="relative  rounded-xl bg-zinc-900/50 border border-zinc-800/50 backdrop-blur-sm hover:border-emerald-500/30 transition-all duration-500">
+      <div className="relative  rounded-xl bg-[#0a0f0d] border border-emerald-900/40 backdrop-blur-sm hover:border-emerald-500/30 transition-all duration-500">
         <div className="p-6">
           <div className="relative mb-6">
             <motion.div

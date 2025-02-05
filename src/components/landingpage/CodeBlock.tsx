@@ -71,11 +71,11 @@ export default function CodeBlock() {
                   <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
                   <div className="w-3 h-3 rounded-full bg-green-500/80" />
                 </div>
-                <div className="text-xs text-muted-foreground">example.ts</div>
+                <div className="text-xs text-primary">example.ts</div>
               </div>
               <div className="relative group">
                 <pre className="p-4 text-sm overflow-x-auto">
-                  <code className="language-typescript">{`import { EchoBits } from '@echobits/client'
+                  <code className="language-typescript text-foreground">{`import { EchoBits } from '@echobits/client'
 
 const analytics = new EchoBits({
   siteId: 'your-site-id',
@@ -118,12 +118,12 @@ analytics.track({
             </div>
 
             <div className="mt-4 flex items-center justify-between px-4">
-              <div className="text-sm text-muted-foreground">
+              <div className="text-sm text-white">
                 Ready to use in under 3 minutes
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                <span className="text-xs text-muted-foreground">
+                <span className="text-xs  text-white">
                   Live Preview
                 </span>
               </div>

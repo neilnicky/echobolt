@@ -1,9 +1,9 @@
-"use client";
+"use client"
 
 import { Shield, Users, Zap } from "lucide-react";
-import React, { useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { LucideIcon } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 
 interface FeatureCardProps {
   icon: LucideIcon;
@@ -29,11 +29,8 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
     >
-      <div className="bg-[#0a0f0d] border border-emerald-900/40 p-8 rounded-lg relative z-10 ">
+      <div className="bg-[#0a0f0d] border border-emerald-900/40 p-8 rounded-lg relative z-10">
         <motion.div
-          // animate={{
-          //   rotate: isHovered ? 360 : 0,
-          // }}
           transition={{ duration: 0.7, ease: "easeInOut" }}
           className="relative mb-6 w-14 h-14 flex items-center justify-center"
         >
@@ -96,12 +93,11 @@ export default function Features() {
           transition={{ duration: 0.5 }}
           className="text-center mb-14"
         >
-          <h2 className="text-3xl font-medium text-white/90 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white to-white/60 bg-clip-text text-transparent">
             Why Choose <span className="text-emerald-400">EchoLive</span>?
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto text-sm">
-            Experience the future of web analytics with our cutting-edge
-            features
+          <p className="text-xl text-zinc-400">
+            Experience the future of web analytics with our cutting-edge features
           </p>
         </motion.div>
 

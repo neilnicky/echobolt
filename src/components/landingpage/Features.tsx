@@ -1,9 +1,10 @@
-"use client"
+"use client";
 
-import { Shield, Users, Zap } from "lucide-react";
-import { useState } from "react";
 import { motion } from "framer-motion";
 import type { LucideIcon } from "lucide-react";
+import { Shield, Users, Zap } from "lucide-react";
+import { useState } from "react";
+import DemoCount from "./DemoCount";
 
 interface FeatureCardProps {
   icon: LucideIcon;
@@ -97,7 +98,8 @@ export default function Features() {
             Why Choose <span className="text-emerald-500">EchoLive</span>?
           </h2>
           <p className="text-xl text-zinc-400">
-            Experience the future of web analytics with our cutting-edge features
+            Experience the future of web analytics with our cutting-edge
+            features
           </p>
         </motion.div>
 
@@ -112,6 +114,7 @@ export default function Features() {
             />
           ))}
         </div>
+        <DemoCount />
       </div>
     </section>
   );

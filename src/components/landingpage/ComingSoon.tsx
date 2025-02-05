@@ -25,7 +25,7 @@ const FeatureCard = ({ icon: Icon, title, description, index }: FeatureCardProps
       className="relative group"
     >
       <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 via-emerald-500/5 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-500 blur-xl" />
-      <div className="relative overflow-hidden rounded-xl bg-zinc-900/50 border border-zinc-800/50 backdrop-blur-sm hover:border-emerald-500/30 transition-all duration-500">
+      <div className="relative  rounded-xl bg-zinc-900/50 border border-zinc-800/50 backdrop-blur-sm hover:border-emerald-500/30 transition-all duration-500">
         <div className="p-6">
           <div className="relative mb-6">
             <motion.div
@@ -39,7 +39,7 @@ const FeatureCard = ({ icon: Icon, title, description, index }: FeatureCardProps
               <Icon className="h-10 w-10 text-emerald-400" strokeWidth={1.5} />
             </motion.div>
             <motion.div
-              className="absolute inset-0 bg-emerald-500/10 rounded-full"
+              className="absolute inset-0 "
               animate={{
                 scale: isHovered ? 1.5 : 0.8,
                 opacity: isHovered ? 0.3 : 0,
@@ -52,7 +52,7 @@ const FeatureCard = ({ icon: Icon, title, description, index }: FeatureCardProps
           <p className="text-zinc-400 text-sm leading-relaxed">{description}</p>
 
           <motion.div
-            className="absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-emerald-500 to-emerald-500/0"
+            className="absolute bottom-0 left-0  bg-gradient-to-r from-emerald-500 to-emerald-500/0"
             initial={{ width: "0%" }}
             animate={{ width: isHovered ? "100%" : "0%" }}
             transition={{ duration: 0.3 }}
@@ -140,4 +140,4 @@ export default function ComingSoon() {
       </motion.div>
     </section>
   );
-}
+} 

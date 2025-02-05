@@ -94,7 +94,7 @@ export default function Features() {
           className="text-center mb-14"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white to-white/60 bg-clip-text text-transparent">
-            Why Choose <span className="text-emerald-400">EchoLive</span>?
+            Why Choose <span className="text-emerald-500">EchoLive</span>?
           </h2>
           <p className="text-xl text-zinc-400">
             Experience the future of web analytics with our cutting-edge features

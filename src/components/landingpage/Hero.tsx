@@ -7,15 +7,15 @@ import { Spotlight } from "../ui/Spotlight";
 
 export default function Hero() {
   return (
-    <section className="py-20 px-4 relative overflow-hidden">
-      <div className="flex justify-around">
+    <section className="py-20 px-4 relative overflow-hidden ">
+      <div className="grid grid-cols-1 ">
         <div>
           <Spotlight
             className="-top-40 left-0 md:left-60 md:-top-20"
             fill="white"
           />
           <div className="absolute inset-0 bg-gradient-to-br from-[#000000] to-[#001716]" />
-          <div className="container mx-auto  relative">
+          <div className="container mx-auto  relative px-4">
             <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-1.5 rounded-full text-sm font-medium mb-6">
               {/* <Sparkles className="h-4 w-4" /> */}
               <ShinyText

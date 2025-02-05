@@ -14,7 +14,7 @@ export default function Navbar() {
         </Link>
         <nav className="hidden md:flex space-x-8">
           <Link
-            href="#features"
+            href="/#features"
             className="text-muted-foreground hover:text-primary transition"
           >
             Features

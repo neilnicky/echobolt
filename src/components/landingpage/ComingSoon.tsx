@@ -1,57 +1,143 @@
+"use client"
 
+import { motion } from "framer-motion";
+import { Clock, Gauge, Rocket, Sparkles } from "lucide-react";
+import { useState } from "react";
 
-import { Clock, Gauge, Rocket } from "lucide-react";
-import ShinyText from "../ui/Shinytext";
+interface FeatureCardProps {
+  icon: typeof Clock;
+  title: string;
+  description: string;
+  index: number;
+}
 
-export default function ComingSoon() {
+const FeatureCard = ({ icon: Icon, title, description, index }: FeatureCardProps) => {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
-    <section className="py-20 gradient-oreh">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <ShinyText
-            text="Coming Soon"
-            disabled={false}
-            speed={3}
-            className="custom-class text-3xl font-bold mb-2"
-          />
-          <div className="w-fit mx-auto gap-2 bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-medium mb-4">
-            <ShinyText
-              text="Continuous Updates and New Features"
-              disabled={false}
-              speed={3}
-              className="custom-class "
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      viewport={{ once: true }}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      className="relative group"
+    >
+      <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 via-emerald-500/5 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-500 blur-xl" />
+      <div className="relative overflow-hidden rounded-xl bg-zinc-900/50 border border-zinc-800/50 backdrop-blur-sm hover:border-emerald-500/30 transition-all duration-500">
+        <div className="p-6">
+          <div className="relative mb-6">
+            <motion.div
+              animate={{
+                scale: isHovered ? 1.1 : 1,
+                rotate: isHovered ? 10 : 0,
+              }}
+              transition={{ duration: 0.3 }}
+              className="relative z-10"
+            >
+              <Icon className="h-10 w-10 text-emerald-400" strokeWidth={1.5} />
+            </motion.div>
+            <motion.div
+              className="absolute inset-0 bg-emerald-500/10 rounded-full"
+              animate={{
+                scale: isHovered ? 1.5 : 0.8,
+                opacity: isHovered ? 0.3 : 0,
+              }}
+              transition={{ duration: 0.3 }}
             />
           </div>
-        </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="p-6 rounded-lg border bg-card">
-            <Clock className="h-8 w-8 text-primary mb-4" />
-            <h3 className="text-lg font-semibold mb-2">
-              Session Duration Tracker
-            </h3>
-            <p className="text-muted-foreground">
-              Track how long users spend on your website with detailed session
-              analytics.
-            </p>
-          </div>
-          <div className="p-6 rounded-lg border bg-card">
-            <Gauge className="h-8 w-8 text-primary mb-4" />
-            <h3 className="text-lg font-semibold mb-2">Performance Metrics</h3>
-            <p className="text-muted-foreground">
-              Real-time performance monitoring to ensure your website runs at
-              its best.
-            </p>
-          </div>
-          <div className="p-6 rounded-lg border bg-card">
-            <Rocket className="h-8 w-8 text-primary mb-4" />
-            <h3 className="text-lg font-semibold mb-2">Engagement Widgets</h3>
-            <p className="text-muted-foreground">
-              Interactive elements to boost user engagement and conversion
-              rates.
-            </p>
-          </div>
+
+          <h3 className="text-xl font-semibold mb-3 text-white/90">{title}</h3>
+          <p className="text-zinc-400 text-sm leading-relaxed">{description}</p>
+
+          <motion.div
+            className="absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-emerald-500 to-emerald-500/0"
+            initial={{ width: "0%" }}
+            animate={{ width: isHovered ? "100%" : "0%" }}
+            transition={{ duration: 0.3 }}
+          />
         </div>
       </div>
+    </motion.div>
+  );
+};
+
+export default function ComingSoon() {
+  const features = [
+    {
+      icon: Clock,
+      title: "Session Duration Tracker",
+      description: "Track how long users spend on your website with detailed session analytics and user flow visualization.",
+    },
+    {
+      icon: Gauge,
+      title: "Performance Metrics",
+      description: "Real-time performance monitoring with intelligent alerts and optimization recommendations.",
+    },
+    {
+      icon: Rocket,
+      title: "Engagement Widgets",
+      description: "Interactive elements and smart popups to boost user engagement and conversion rates.",
+    },
+  ];
+
+  return (
+    <section className="relative py-32 overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(16,185,129,0.05),transparent_50%)]" />
+      
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+        className="container mx-auto px-4"
+      >
+        <div className="text-center mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="inline-flex items-center gap-2 bg-emerald-500/10 text-emerald-400 px-6 py-2 rounded-full text-sm font-medium mb-6 border border-emerald-500/20 backdrop-blur-sm"
+          >
+            <Sparkles className="h-4 w-4" />
+            Coming Soon
+          </motion.div>
+
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            viewport={{ once: true }}
+            className="text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white to-white/70"
+          >
+            The Future of Analytics
+          </motion.h2>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="text-zinc-400 max-w-2xl mx-auto"
+          >
+            We&apos;re building the next generation of web analytics tools. Here&apos;s a sneak peek at what&apos;s coming.
+          </motion.p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-6">
+          {features.map((feature, index) => (
+            <FeatureCard
+              key={index}
+              icon={feature.icon}
+              title={feature.title}
+              description={feature.description}
+              index={index}
+            />
+          ))}
+        </div>
+      </motion.div>
     </section>
   );
 }

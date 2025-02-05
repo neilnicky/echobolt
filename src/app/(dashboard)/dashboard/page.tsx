@@ -1,97 +1,48 @@
-"use client"
+"use client";
 
-import { Overview } from "@/components/dashboard/overview"
-import { RecentVisitors } from "@/components/dashboard/recent-visitors"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Activity, BarChart3, Globe, Users } from "lucide-react"
+import AddDomain from "@/components/dashboard/AddDomain";
+import GenerateKey from "@/components/dashboard/GenerateKey";
+import { Settings } from "lucide-react";
+import { useState } from "react";
 
 export default function DashboardPage() {
+  const [domains, setDomains] = useState<{ name: string; url: string }[]>([]);
+  const [selectedDomain, setSelectedDomain] = useState<number | null>(null);
+
+  const handleAddDomain = (name: string, url: string) => {
+    setDomains([...domains, { name, url }]); // Store new domain
+  };
+
   return (
     <div className="flex-1 space-y-4 p-4 md:p-8 pt-6">
-      <div className="flex items-center justify-between space-y-2">
-        <h2 className="text-3xl font-bold tracking-tight">Dashboard</h2>
+      <div className="flex items-center  justify-center">
         <div className="flex items-center space-x-2">
-          <Button>Add Website</Button>
+          <AddDomain onAddDomain={handleAddDomain} />
         </div>
       </div>
-      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-        <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">
-              Total Visitors
-            </CardTitle>
-            <Users className="h-4 w-4 text-muted-foreground" />
-          </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold">1,324</div>
-            <p className="text-xs text-muted-foreground">
-              +20.1% from last month
-            </p>
-          </CardContent>
-        </Card>
-        <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">
-              Active Now
-            </CardTitle>
-            <Activity className="h-4 w-4 text-muted-foreground" />
-          </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold">42</div>
-            <p className="text-xs text-muted-foreground">
-              +15% from last hour
-            </p>
-          </CardContent>
-        </Card>
-        <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Avg. Visit Duration</CardTitle>
-            <BarChart3 className="h-4 w-4 text-muted-foreground" />
-          </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold">2m 13s</div>
-            <p className="text-xs text-muted-foreground">
-              +7% from last week
-            </p>
-          </CardContent>
-        </Card>
-        <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">
-              Active Websites
-            </CardTitle>
-            <Globe className="h-4 w-4 text-muted-foreground" />
-          </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold">3</div>
-            <p className="text-xs text-muted-foreground">
-              All websites active
-            </p>
-          </CardContent>
-        </Card>
+
+      <div className="mt-6">
+        <h2 className="text-lg font-semibold">Added Domains</h2>
+        <ul className="mt-2 space-y-2">
+          {domains.map((domain, index) => (
+            <li
+              key={index}
+              className="flex  justify-between p-2 border rounded-lg"
+            >
+              <div>
+                <span className="font-medium">{domain.name}</span> -{" "}
+                {domain.url}
+              </div>
+              <Settings
+                onClick={() => setSelectedDomain(index)}
+                className="cursor-pointer"
+              />
+            </li>
+          ))}
+        </ul>
       </div>
-      <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-7">
-        <Card className="col-span-4">
-          <CardHeader>
-            <CardTitle>Overview</CardTitle>
-          </CardHeader>
-          <CardContent className="pl-2">
-            <Overview />
-          </CardContent>
-        </Card>
-        <Card className="col-span-3">
-          <CardHeader>
-            <CardTitle>Recent Visitors</CardTitle>
-            <CardDescription>
-              Real-time visitor activity across your websites
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <RecentVisitors />
-          </CardContent>
-        </Card>
-      </div>
+
+      {selectedDomain !== null && <GenerateKey />}
     </div>
-  )
+  );
 }

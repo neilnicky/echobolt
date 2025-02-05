@@ -86,7 +86,7 @@ export default function Features() {
   ];
 
   return (
-    <section id="features" className="py-32 oreh-gradient relative">
+    <section id="features" className="pt-32 pb-20 oreh-gradient relative">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -114,7 +114,7 @@ export default function Features() {
             />
           ))}
         </div>
-        <div className="relative  z-100">
+        <div className="relative z-100">
           <DemoCount />
         </div>
       </div>

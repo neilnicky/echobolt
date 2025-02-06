@@ -12,7 +12,7 @@ export default function CodeBlock() {
   const [activeTag, setActiveTag] = useState(0);
 
   const tags = [
-    { name: "Next.js", color: "from-emerald-500 to-emerald-700" },
+    { name: "Next.js", color: "from-purple-500to-emerald-700" },
     { name: "React", color: "from-cyan-500 to-cyan-700" },
     { name: "Vue", color: "from-green-500 to-green-700" },
     { name: "Angular", color: "from-red-500 to-red-700" },
@@ -86,7 +86,7 @@ export default function CodeBlock() {
 
             <motion.p
               variants={itemVariants}
-              className="text-xl text-zinc-400 mb-8"
+              className="text-xl text-purple-200/60mb-8"
             >
               Integrate it into your language or framework within minutes and
               unlock a simpler developer workflow.
@@ -167,7 +167,7 @@ export default function CodeBlock() {
                     )
                   )}
                 </div>
-                <div className="text-xs text-emerald-400 font-mono">
+                <div className="text-xs text-purple-400 font-mono">
                   example.ts
                 </div>
               </div>
@@ -203,7 +203,7 @@ analytics.track({
                     }
                   >
                     {copied === "code" ? (
-                      <Check className="h-4 w-4 text-emerald-400" />
+                      <Check className="h-4 w-4 text-purple-400" />
                     ) : (
                       <Copy className="h-4 w-4 text-zinc-400" />
                     )}
@@ -216,7 +216,7 @@ analytics.track({
               variants={itemVariants}
               className="mt-6 flex items-center justify-between px-4"
             >
-              <div className="text-sm text-zinc-400 font-medium">
+              <div className="text-sm text-purple-200/60font-medium">
                 Ready to use in under 3 minutes
               </div>
               <div className="flex items-center gap-2">
@@ -232,7 +232,7 @@ analytics.track({
                   }}
                   className="w-2 h-2 rounded-full bg-emerald-400"
                 />
-                <span className="text-xs text-emerald-400 font-medium">
+                <span className="text-xs text-purple-400 font-medium">
                   Live Preview
                 </span>
               </div>

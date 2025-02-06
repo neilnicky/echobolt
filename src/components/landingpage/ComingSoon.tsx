@@ -29,8 +29,8 @@ const FeatureCard = ({
       onMouseLeave={() => setIsHovered(false)}
       className="relative group"
     >
-      <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 via-emerald-500/5 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-500 blur-xl" />
-      <div className="relative  rounded-xl bg-[#0a0f0d] border border-emerald-900/40 backdrop-blur-sm hover:border-emerald-500/30 transition-all duration-500">
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-emerald-500/5 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-500 blur-xl" />
+      <div className="relative  rounded-xl bg-[#0e0f21] border border-purple-900/40backdrop-blur-sm hover:border-purple-500/30transition-all duration-500">
         <div className="p-6">
           <div className="relative mb-6">
             <motion.div
@@ -41,7 +41,7 @@ const FeatureCard = ({
               transition={{ duration: 0.3 }}
               className="relative z-10"
             >
-              <Icon className="h-10 w-10 text-emerald-400" strokeWidth={1.5} />
+              <Icon className="h-10 w-10 text-purple-400" strokeWidth={1.5} />
             </motion.div>
             <motion.div
               className="absolute inset-0 "
@@ -54,10 +54,10 @@ const FeatureCard = ({
           </div>
 
           <h3 className="text-xl font-semibold mb-3 text-white/90">{title}</h3>
-          <p className="text-zinc-400 text-sm leading-relaxed">{description}</p>
+          <p className="text-purple-200/60text-sm leading-relaxed">{description}</p>
 
           <motion.div
-            className="absolute bottom-0 left-0  bg-gradient-to-r from-emerald-500 to-emerald-500/0"
+            className="absolute bottom-0 left-0  bg-gradient-to-r from-purple-500to-emerald-500/0"
             initial={{ width: "0%" }}
             animate={{ width: isHovered ? "100%" : "0%" }}
             transition={{ duration: 0.3 }}
@@ -92,7 +92,7 @@ export default function ComingSoon() {
 
   return (
     <section className="relative py-32 overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(16,185,129,0.05),transparent_50%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(81,51,133,0.05),transparent_50%)]" />
 
       <motion.div
         initial={{ opacity: 0 }}
@@ -107,7 +107,7 @@ export default function ComingSoon() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 bg-emerald-500/10 text-emerald-400 px-6 py-2 rounded-full text-sm font-medium mb-6 border border-emerald-500/20 backdrop-blur-sm"
+            className="inline-flex items-center gap-2 bg-purple-500/10 text-purple-400 px-6 py-2 rounded-full text-sm font-medium mb-6 border border-purple-500/20backdrop-blur-sm"
           >
             <Sparkles className="h-4 w-4" />
             Coming Soon
@@ -128,7 +128,7 @@ export default function ComingSoon() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
-            className="text-zinc-400 max-w-2xl mx-auto"
+            className="text-purple-200/60max-w-2xl mx-auto"
           >
             We&apos;re building the next generation of web live tools.
             Here&apos;s a sneak peek at what&apos;s coming.

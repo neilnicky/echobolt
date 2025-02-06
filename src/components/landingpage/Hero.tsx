@@ -3,26 +3,20 @@ import Link from "next/link";
 import { Button } from "../ui/button";
 import ShinyText from "../ui/Shinytext";
 import SplitText from "../ui/Splittext";
-import { Spotlight } from "../ui/Spotlight";
 
 export default function Hero() {
   return (
-    <section className="py-20 px-4 relative overflow-hidden ">
-      <div className="grid grid-cols-1 ">
+    <section className="py-20 px-4 relative overflow-hidden">
+      <div className="grid grid-cols-1">
         <div>
-          <Spotlight
-            className="-top-40 left-0 md:left-60 md:-top-20"
-            fill="white"
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-[#000000] to-[#001716]" />
-          <div className="container mx-auto  relative px-4">
+          <div className="absolute inset-0 bg-gradient-to-br from-[#0e0f2177] to-[#1e132d3d]" />
+          <div className="container mx-auto relative px-4">
             <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-1.5 rounded-full text-sm font-medium mb-6">
-              {/* <Sparkles className="h-4 w-4" /> */}
               <ShinyText
                 text="The most affordable real-time widgets for your website"
                 disabled={false}
                 speed={3}
-                className="custom-class "
+                className="custom-class"
               />
             </div>
             <h1 className="text-5xl md:text-7xl font-semibold tracking-tight mb-6 max-w-md md:max-w-xl">
@@ -40,13 +34,13 @@ export default function Hero() {
               />
               <br />
             </h1>
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl ">
+            <p className="text-xl text-muted-foreground mb-8 max-w-2xl">
               Track your website visitors in real-time with our powerful and
               easy-to-integrate widgets. Perfect for modern web applications.
             </p>
             <div className="flex justify-start gap-4">
               <Link href="/signup">
-                <Button className="gap-2  rounded-xl">
+                <Button className="gap-2 rounded-xl">
                   Start for Free <ArrowRight className="h-4 w-4" />
                 </Button>
               </Link>
@@ -57,9 +51,6 @@ export default function Hero() {
               </Link>
             </div>
           </div>
-        </div>
-        <div>
-          
         </div>
       </div>
     </section>

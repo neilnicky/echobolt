@@ -6,12 +6,12 @@ import { Toaster } from "@/components/ui/toaster";
 import Footer from "@/components/landingpage/Footer";
 import Navbar from "@/components/landingpage/Navbar";
 
-const lexend = Catamaran({ subsets: ["latin"] });
+const catamaran = Catamaran({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "EchoLive - Real-time Website Analytics",
+  title: "EchoLive - Real-time Web Widgets",
   description:
-    "Powerful real-time website analytics and visitor tracking for modern web applications",
+    "Powerful real-time website tools and visitor tracking for modern web applications",
 };
 
 export default function RootLayout({
@@ -21,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={lexend.className}>
+      <body className={catamaran.className}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <Navbar />
           {children}

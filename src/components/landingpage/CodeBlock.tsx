@@ -75,10 +75,10 @@ export default function CodeBlock() {
                 <span className=" relative  bg-clip-text text-transparent bg-gradient-to-r from-primary via-primary to-emerald-500">
                   your stack
                   <motion.div
-                    initial={{ width: 0 }}
-                    animate={{ width: "40%" }}
-                    transition={{ duration: 1, delay: 0.5 }}
-                    className="absolute h-px bg-gradient-to-r from-primary/50 to-transparent top-5"
+                    initial={{ width: 0  }}
+                    animate={{ width: "90%", height: 2 }}
+                    transition={{ duration: 2, delay: 0.2 }}
+                    className="absolute h-px bg-gradient-to-r from-primary/80 to-transparent top-[18px]"
                   />
                 </span>
               </h2>

@@ -10,51 +10,50 @@ body {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgb(255 255 255 / 0.02)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e");
 }
 
-
 @layer base {
   :root {
-    
-    --background: 253 100% 99%;
-    --foreground: 253 5% 5%;
-    --card: 253 100% 99%;
-    --card-foreground: 253 5% 5%;
-    --popover: 253 100% 99%;
-    --popover-foreground: 253 5% 5%;
-    --primary: 253 47% 50%;
-    --primary-foreground: 253 5% 5%;
-    --secondary: 253 5% 96%;
-    --secondary-foreground: 253 5% 5%;
-    --muted: 253 5% 96%;
-    --muted-foreground: 253 5% 40%;
-    --accent: 253 47% 50%;
-    --accent-foreground: 253 5% 5%;
+    --background: 260 25% 98%;
+    --foreground: 260 35% 5%;
+    --card: 260 25% 98%;
+    --card-foreground: 260 35% 5%;
+    --popover: 260 25% 98%;
+    --popover-foreground: 260 35% 5%;
+    --primary: 260 60% 50%;
+    --primary-foreground: 260 25% 98%;
+    --secondary: 260 25% 96%;
+    --secondary-foreground: 260 35% 5%;
+    --muted: 260 25% 96%;
+    --muted-foreground: 260 35% 40%;
+    --accent: 260 60% 50%;
+    --accent-foreground: 260 35% 5%;
     --destructive: 0 84% 60%;
-    --destructive-foreground: 253 100% 99%;
-    --border: 253 5% 90%;
-    --input: 253 5% 90%;
-    --ring: 253 47% 50%;
+    --destructive-foreground: 260 25% 98%;
+    --border: 260 25% 90%;
+    --input: 260 25% 90%;
+    --ring: 260 60% 50%;
     --radius: 0.75rem;
   }
+  
   .dark {
-    --background: 253 10% 4%;
-    --foreground: 253 5% 96%;
-    --card: 253 10% 6%;
-    --card-foreground: 253 5% 96%;
-    --popover: 253 10% 4%;
-    --popover-foreground: 253 5% 96%;
-    --primary: 253 47% 50%;
-    --primary-foreground: 253 10% 4%;
-    --secondary: 253 10% 8%;
-    --secondary-foreground: 253 5% 96%;
-    --muted: 253 10% 8%;
-    --muted-foreground: 253 5% 65%;
-    --accent: 253 47% 50%;
-    --accent-foreground: 253 5% 96%;
+    --background: 260 35% 4%;
+    --foreground: 260 25% 96%;
+    --card: 260 35% 6%;
+    --card-foreground: 260 25% 96%;
+    --popover: 260 35% 4%;
+    --popover-foreground: 260 25% 96%;
+    --primary: 260 60% 50%;
+    --primary-foreground: 260 35% 98%;
+    --secondary: 260 35% 8%;
+    --secondary-foreground: 260 25% 96%;
+    --muted: 260 35% 8%;
+    --muted-foreground: 260 25% 65%;
+    --accent: 260 60% 50%;
+    --accent-foreground: 260 25% 96%;
     --destructive: 0 62% 30%;
-    --destructive-foreground: 253 5% 96%;
-    --border: 253 10% 8%;
-    --input: 253 10% 8%;
-    --ring: 253 47% 50%;
+    --destructive-foreground: 260 25% 96%;
+    --border: 260 35% 8%;
+    --input: 260 35% 8%;
+    --ring: 260 60% 50%;
   }
 }
 
@@ -80,14 +79,14 @@ body {
 }
 
 .glass-card {
-  background: rgba(32, 23, 46, 0.616);
+  background: rgba(14, 15, 33, 0.7);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .gradient-bg {
   background: radial-gradient(circle at 50% 50%, 
-    rgba(51, 31, 77, 0.15) 0%,
+    rgba(81, 51, 133, 0.15) 0%,
     rgba(30, 19, 45, 0.15) 25%,
     rgba(0, 0, 0, 0) 50%
   );
@@ -98,24 +97,24 @@ body {
     135deg,
     rgba(0, 0, 0, 0) 100%,
     rgba(30, 19, 45, 0.1) 50%,
-    rgba(51, 31, 77, 0.2) 0%
+    rgba(81, 51, 133, 0.2) 0%
   );
 }
 
 .oreh-gradient {
   background: linear-gradient(
     135deg,
-    rgba(51, 31, 77, 0.158) 0%,
+    rgba(81, 51, 133, 0.158) 0%,
     rgba(30, 19, 45, 0) 50%,
-    rgba(9, 8, 24, 0.062) 100%
+    rgba(14, 15, 33, 0.062) 100%
   );
 }
 
 .gradient-oreh {
   background: linear-gradient(
     135deg,
-    rgba(9, 8, 24, 0.062) 100%,
+    rgba(14, 15, 33, 0.062) 100%,
     rgba(30, 19, 45, 0) 50%,
-    rgba(51, 31, 77, 0.158) 0%
+    rgba(81, 51, 133, 0.158) 0%
   );
 }

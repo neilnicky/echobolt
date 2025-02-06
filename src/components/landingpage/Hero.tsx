@@ -16,13 +16,13 @@ export default function Hero() {
                 text="The most affordable real-time widgets for your website"
                 disabled={false}
                 speed={3}
-                className="custom-class"
+                className="custom-class "
               />
             </div>
-            <h1 className="text-5xl md:text-7xl font-semibold tracking-tight mb-6 max-w-md md:max-w-xl">
+            <h1 className="text-5xl md:text-7xl  font-semibold tracking-tight mb-6 max-w-md md:max-w-xl lg:max-w-3xl">
               <SplitText
                 text="Real-time Widgets Made Simple"
-                className="text-5xl md:text-7xl font-semibold tracking-tight mb-6"
+                className="text-5xl md:text-7xl lg:text-8xl font-semibold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-100 via-purple-200  to-purple-300"
                 delay={60}
                 animationFrom={{
                   opacity: 0,
@@ -40,7 +40,7 @@ export default function Hero() {
             </p>
             <div className="flex justify-start gap-4">
               <Link href="/signup">
-                <Button className="gap-2 rounded-xl">
+                <Button className="gap-2 rounded-xl text-white font-semibold ">
                   Start for Free <ArrowRight className="h-4 w-4" />
                 </Button>
               </Link>
